@@ -7,7 +7,6 @@ const height = window.innerHeight;
 ctx.strokeStyle = "#BADA55";
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
-ctx.lineWidth = 25
 // ctx.globalCompositeOperation = 'multiply'
 
 //Valida se o botão esta sendo clicado ou nao para desenhar ou parar
@@ -35,7 +34,7 @@ function draw(e) {
   if(hue >= 360){
     hue = 0
   }
-  if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
+  if(ctx.lineWidth >= 50 || ctx.lineWidth <= 1){
     direction = !direction //linha vai aumentar ou diminuir conforme atinger os extremos 100 e 1
   }
 
@@ -45,6 +44,7 @@ function draw(e) {
     ctx.lineWidth--
   }
 }
+
 
 canvas.addEventListener("mousedown", (e) => {
   isDrawing = true
